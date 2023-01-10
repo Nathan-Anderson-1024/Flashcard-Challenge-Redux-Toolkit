@@ -3,9 +3,7 @@ import { addQuizIds } from "../topics/topicsSlice";
 export const quizzesSlice = createSlice({
     name: 'quizzes',
     initialState: {
-        quizzes: {
-
-        }
+        quizzes: {}
     },
     reducers: {
         addQuiz: (state, action) => {
@@ -23,6 +21,6 @@ export const thunkCombineProcess = (quiz) => {
     }
 };
 
-export default quizzesSlice.reducer
 export const selectQuizzes = (state) => state.quizzes.quizzes;
-export const {addQuiz} = quizzesSlice.actions
+export const { addQuiz } = quizzesSlice.actions;
+export default quizzesSlice.reducer;
